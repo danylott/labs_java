@@ -25,4 +25,16 @@ public class RestaurantCarriage extends Carriage {
     public void setCountSeats(int countSeats) {
         this.countSeats = countSeats;
     }
+
+    @Override
+    public String toString() {
+        return "\nRestaurantCarriage{" +
+                "id=" + getId() +
+                ", name='" + getName() + '\'' +
+                ", weight=" + getWeight() +
+                ", height=" + getHeight() +
+                ", menu='" + menu + '\'' +
+                ", countSeats=" + countSeats +
+                '}';
+    }
 }

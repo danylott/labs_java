@@ -15,4 +15,15 @@ public class Worker extends Human {
     public void setPosition(String position) {
         this.position = position;
     }
+
+    @Override
+    public String toString() {
+        return "\nWorker{" +
+                "firstName='" + getFirstName() + '\'' +
+                ", lastName='" + getLastName() + '\'' +
+                ", age='" + getAge() + '\'' +
+                ", passport='" + getPassport() + '\'' +
+                ", position='" + getPosition() + '\'' +
+                '}';
+    }
 }

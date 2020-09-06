@@ -1,10 +1,10 @@
 package main;
 
 public class Carriage {
-    public int id;
-    public String name;
-    public int weight;
-    public int height;
+    private int id;
+    private String name;
+    private int weight;
+    private int height;
 
     public Carriage(int id, String name, int weight, int height) {
         this.id = id;

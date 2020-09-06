@@ -3,11 +3,16 @@ package main;
 import java.util.ArrayList;
 
 public class Train {
+    protected static final int RANDOM_NUM = 10;
     private int id;
     private String name;
     private int power;
     private ArrayList<Worker> crew;
     private ArrayList<Carriage> carriages;
+
+    public Train() {
+
+    }
 
     public Train(int id, String name, int power, ArrayList<Worker> crew, ArrayList<Carriage> carriages) {
         this.id = id;
@@ -55,5 +60,16 @@ public class Train {
 
     public void setCarriages(ArrayList<Carriage> carriages) {
         this.carriages = carriages;
+    }
+
+    @Override
+    public String toString() {
+        return "Train{" +
+                "\nid=" + id +
+                "\nname='" + name + '\'' +
+                "\npower=" + power +
+                "\ncrew=" + crew +
+                "\ncarriages=" + carriages +
+                '}';
     }
 }

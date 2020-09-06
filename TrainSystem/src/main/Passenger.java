@@ -15,4 +15,11 @@ public class Passenger extends Human {
     public void setMinComfort(int minComfort) {
         this.minComfort = minComfort;
     }
+
+    @Override
+    public String toString() {
+        return "Passenger{" +
+                "name=" + getFirstName() + " " + getLastName() +
+                '}';
+    }
 }

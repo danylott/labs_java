@@ -69,4 +69,20 @@ public class PassengerCarriage extends Carriage {
     public void setLuggage(ArrayList<Luggage> luggage) {
         this.luggage = luggage;
     }
+
+    @Override
+    public String toString() {
+        return "\nPassengerCarriage{" +
+                "id=" + getId() +
+                ", name='" + getName() + '\'' +
+                ", weight=" + getWeight() +
+                ", height=" + getHeight() +
+                ", comfort=" + comfort +
+                ", type='" + type + '\'' +
+                ", maxPassengers=" + maxPassengers +
+                ", maxLuggage=" + maxLuggage +
+                ", passengers=" + passengers +
+                ", luggage=" + luggage +
+                '}';
+    }
 }

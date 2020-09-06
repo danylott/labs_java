@@ -34,4 +34,13 @@ public class Luggage {
     public void setWeight(int weight) {
         this.weight = weight;
     }
+
+    @Override
+    public String toString() {
+        return "Luggage{" +
+                "width=" + width +
+                ", height=" + height +
+                ", weight=" + weight +
+                '}';
+    }
 }

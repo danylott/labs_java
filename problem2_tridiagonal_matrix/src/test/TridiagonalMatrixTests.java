@@ -161,7 +161,7 @@ public class TridiagonalMatrixTests {
         matrix.moveBackward(4,4);
         matrix.moveBackward(8,4);
         double eps = 0.0001;
-        ArrayList<Double> result = matrix.findRoots(0,12,roots);
+        ArrayList<Double> result = matrix.findRoots(0,12, 4,roots);
         for (double res : result) {
             assertTrue(Math.abs(res - 1) < eps);
         }

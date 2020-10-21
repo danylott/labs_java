@@ -10,14 +10,13 @@ public class Main {
         ArrayList<Double> c = new ArrayList<>();
         ArrayList<Double> f = new ArrayList<>();
         for(int i = 0; i < 12; i++) {
-            a.add((i + 1) + 0.0);
-            b.add((i + 2) + 0.0);
-            c.add((i + 3) + 0.0);
-            f.add(3 * (i + 1) + 3 + 0.0);
+            a.add(Math.random() * 10);
+            b.add(Math.random() * 10);
+            c.add(a.get(i) + b.get(i) + Math.random() * 5);
+            f.add(Math.random() * 7);
         }
-        f.set(0, 5.0);
-        f.set(11, 26.0);
         TridiagonalMatrix matrix = new TridiagonalMatrix(a,b,c,f);
+
         System.out.println("Initial Matrix:");
         System.out.println(matrix);
         MatrixThread thread1 = new MatrixThread(matrix, 0 ,4, "forward");
@@ -47,6 +46,10 @@ public class Main {
         System.out.println("Roots on the edges:");
         System.out.println(roots);
         System.out.println("Final roots:");
-        System.out.println(matrix.findRoots(0, 12, roots));
+        System.out.println(matrix.findRoots(0, 12, 4, roots));
+
+        TridiagonalMatrix matrix1 = new TridiagonalMatrix(a,b,c,f);
+        System.out.println(matrix1);
+        System.out.println(matrix1.simpleSolve());
     }
 }

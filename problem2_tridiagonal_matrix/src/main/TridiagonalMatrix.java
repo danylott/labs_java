@@ -121,10 +121,11 @@ public class TridiagonalMatrix {
         return (data.get(index).get(data.size()) - sum) / data.get(index).get(index);
     }
 
-    public ArrayList<Double> findRoots(Integer start, Integer count, ArrayList<Double> knownRoots) {
+    public ArrayList<Double> findRoots(Integer start, Integer count, Integer squareSize, ArrayList<Double> knownRoots) {
         ArrayList<Double> result = new ArrayList<>();
         for(int i = start; i < start + count; i++) {
-            result.add(calculateRoot(i, count, knownRoots));
+            Double el = calculateRoot(i, squareSize, knownRoots);
+            result.add(el);
         }
         return result;
     }

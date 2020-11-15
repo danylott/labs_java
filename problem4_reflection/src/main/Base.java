@@ -1,6 +1,8 @@
 package main;
 
-public class Base {
+import java.util.ArrayList;
+
+public class Base extends ArrayList {
     public String id;
     public Base(String id) {
         this.id = id;

@@ -60,8 +60,8 @@
 
     <Button
         android:id="@+id/btn_0"
-        android:layout_width="135dp"
-        android:layout_height="135dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_marginLeft="3dp"
         android:layout_marginTop="15dp"
         android:backgroundTint="#413f43"
@@ -69,12 +69,14 @@
         android:textSize="60sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/playerStatus" />
+        app:layout_constraintTop_toBottomOf="@+id/playerStatus"
+        />
 
     <Button
         android:id="@+id/btn_1"
-        android:layout_width="135dp"
-        android:layout_height="135dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="2dp"
         android:backgroundTint="#413f43"
         android:textColor="@color/white"
         android:textSize="60sp"
@@ -86,8 +88,9 @@
 
     <Button
         android:id="@+id/btn_2"
-        android:layout_width="135dp"
-        android:layout_height="135dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="2dp"
         android:backgroundTint="#413f43"
         android:textColor="@color/white"
         android:textSize="60sp"
@@ -97,8 +100,20 @@
 
     <Button
         android:id="@+id/btn_3"
-        android:layout_width="135dp"
-        android:layout_height="135dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="2dp"
+        android:backgroundTint="#413f43"
+        android:textColor="@color/white"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/btn_2"
+        app:layout_constraintTop_toTopOf="@+id/btn_2" />
+
+    <Button
+        android:id="@+id/btn_4"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:backgroundTint="#413f43"
         android:textColor="@color/white"
         android:textSize="60sp"
@@ -107,62 +122,141 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_0" />
 
     <Button
-        android:id="@+id/btn_4"
-        android:layout_width="135dp"
-        android:layout_height="135dp"
-        android:backgroundTint="#413f43"
-        android:textColor="@color/white"
-        android:textSize="60sp"
-        android:textStyle="bold"
-        app:layout_constraintLeft_toRightOf="@+id/btn_3"
-        app:layout_constraintTop_toTopOf="@+id/btn_3"
-
-        />
-
-    <Button
         android:id="@+id/btn_5"
-        android:layout_width="135dp"
-        android:layout_height="135dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="2dp"
         android:backgroundTint="#413f43"
         android:textColor="@color/white"
         android:textSize="60sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toRightOf="@+id/btn_4"
-        app:layout_constraintTop_toTopOf="@+id/btn_4" />
+        app:layout_constraintTop_toTopOf="@+id/btn_4"
+
+        />
 
     <Button
         android:id="@+id/btn_6"
-        android:layout_width="135dp"
-        android:layout_height="135dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="2dp"
         android:backgroundTint="#413f43"
         android:textColor="@color/white"
         android:textSize="60sp"
         android:textStyle="bold"
-        app:layout_constraintLeft_toLeftOf="@+id/btn_3"
-        app:layout_constraintTop_toBottomOf="@+id/btn_3" />
+        app:layout_constraintLeft_toRightOf="@+id/btn_5"
+        app:layout_constraintTop_toTopOf="@+id/btn_5" />
 
     <Button
         android:id="@+id/btn_7"
-        android:layout_width="135dp"
-        android:layout_height="135dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="2dp"
         android:backgroundTint="#413f43"
         android:textColor="@color/white"
         android:textSize="60sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toRightOf="@+id/btn_6"
-        app:layout_constraintTop_toTopOf="@+id/btn_6"
-        />
+        app:layout_constraintTop_toTopOf="@+id/btn_6" />
 
     <Button
         android:id="@+id/btn_8"
-        android:layout_width="135dp"
-        android:layout_height="135dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:backgroundTint="#413f43"
         android:textColor="@color/white"
         android:textSize="60sp"
         android:textStyle="bold"
-        app:layout_constraintLeft_toRightOf="@+id/btn_7"
-        app:layout_constraintTop_toTopOf="@+id/btn_7"
+        app:layout_constraintLeft_toLeftOf="@+id/btn_4"
+        app:layout_constraintTop_toBottomOf="@+id/btn_4" />
+
+    <Button
+        android:id="@+id/btn_9"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="2dp"
+        android:backgroundTint="#413f43"
+        android:textColor="@color/white"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/btn_8"
+        app:layout_constraintTop_toTopOf="@+id/btn_8"
+        />
+
+    <Button
+        android:id="@+id/btn_10"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="2dp"
+        android:backgroundTint="#413f43"
+        android:textColor="@color/white"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/btn_9"
+        app:layout_constraintTop_toTopOf="@+id/btn_9"
+        />
+
+    <Button
+        android:id="@+id/btn_11"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="2dp"
+        android:backgroundTint="#413f43"
+        android:textColor="@color/white"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/btn_10"
+        app:layout_constraintTop_toTopOf="@+id/btn_10"
+        />
+
+    <Button
+        android:id="@+id/btn_12"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:backgroundTint="#413f43"
+        android:textColor="@color/white"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@+id/btn_8"
+        app:layout_constraintTop_toBottomOf="@+id/btn_8" />
+
+    <Button
+        android:id="@+id/btn_13"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="2dp"
+        android:backgroundTint="#413f43"
+        android:textColor="@color/white"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/btn_12"
+        app:layout_constraintTop_toTopOf="@+id/btn_12"
+        />
+
+    <Button
+        android:id="@+id/btn_14"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="2dp"
+        android:backgroundTint="#413f43"
+        android:textColor="@color/white"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/btn_13"
+        app:layout_constraintTop_toTopOf="@+id/btn_13"
+        />
+
+    <Button
+        android:id="@+id/btn_15"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="2dp"
+        android:backgroundTint="#413f43"
+        android:textColor="@color/white"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/btn_14"
+        app:layout_constraintTop_toTopOf="@+id/btn_14"
         />
 
     <Button
@@ -174,7 +268,7 @@
         android:backgroundTint="#E1470D"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/btn_6"
+        app:layout_constraintTop_toBottomOf="@+id/btn_12"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         />

@@ -10,10 +10,12 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Arrays;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView playerOneScore, playerTwoScore, playerStatus;
-    private Button [] buttons = new Button[9];
+    private Button [] buttons = new Button[16];
     private Button resetGame;
 
     private int playerOneScoreCount, playerTwoScoreCount, roundCount;
@@ -22,12 +24,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     // p1 => 0
     // p2 => 1
     // empty => 2
-    int [] gameState = {2,2,2,2,2,2,2,2,2};
+    int [] gameState = {2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2};
 
     int [][] winningPositions = {
-            {0, 1, 2}, {3, 4, 5}, {6, 7, 8}, // rows
-            {0, 3, 6}, {1, 4, 7}, {2, 5, 8}, // columns
-            {0, 4, 8}, {2, 4, 6}, // diagonals
+            {0, 1, 2, 3}, {4, 5, 6, 7}, {8, 9, 10, 11}, {12, 13, 14, 15}, // rows
+            {0, 4, 8, 12}, {1, 5, 9, 13}, {2, 6, 10, 14}, {3, 7, 11, 15}, // columns
+            {0, 5, 10, 15}, {3, 6, 9, 12}, // diagonals
     };
 
     @Override
@@ -73,8 +75,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         String buttonId = v.getResources().getResourceEntryName(v.getId());
         // get last character of button name
-        int gameStatePointer = Integer.parseInt(
-                buttonId.substring(buttonId.length() - 1, buttonId.length()));
+        int gameStatePointer;
+        try {
+            gameStatePointer = Integer.parseInt(
+                    buttonId.substring(buttonId.length() - 2, buttonId.length()));
+        } catch (Exception e) {
+            gameStatePointer = Integer.parseInt(
+                    buttonId.substring(buttonId.length() - 1, buttonId.length()));
+        }
+
 
         // if first player
         if(activePlayer) {
@@ -93,13 +102,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 playerOneScoreCount++;
                 updatePlayerScore();
                 Toast.makeText(this, "Player One Won!", Toast.LENGTH_SHORT).show();
-                playAgain();
             } else {
                 playerTwoScoreCount++;
                 updatePlayerScore();
                 Toast.makeText(this, "Player two Won!", Toast.LENGTH_SHORT).show();
-                playAgain();
             }
+            playAgain();
 
         } else if (roundCount == buttons.length) {
             playAgain();

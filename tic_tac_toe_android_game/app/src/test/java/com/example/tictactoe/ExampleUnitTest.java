@@ -11,7 +11,14 @@ import static org.junit.Assert.*;
  */
 public class ExampleUnitTest {
     @Test
-    public void addition_isCorrect() {
-        assertEquals(4, 2 + 2);
+    public void checkWinner() {
+        MainActivity testMainActivity = new MainActivity();
+        assertFalse(testMainActivity.checkWinner());
+        testMainActivity.gameState = new int[]{0, 0, 0, 0, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2};
+        assertTrue(testMainActivity.checkWinner());
+        testMainActivity.gameState = new int[]{2, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2};
+        assertTrue(testMainActivity.checkWinner());
+        testMainActivity.gameState = new int[]{2, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 2, 2, 2, 2, 2};
+        assertFalse(testMainActivity.checkWinner());
     }
 }

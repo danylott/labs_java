@@ -160,12 +160,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int maxSimilarPositions = 0;
         for(int i = 0; i < winningPositions.length; i++) {
             int currentSimilarPositions = 0;
+            int playerSimilarPositions = 0;
             for(int position : winningPositions[i]) {
+                if(gameState[position] == 0) {
+                    playerSimilarPositions++;
+                }
                 if(currentPositions.contains(position)) {
                     currentSimilarPositions++;
                 }
             }
-            if(currentSimilarPositions > maxSimilarPositions) {
+            if(currentSimilarPositions == winningPositions[i].length - 1 ||
+                    playerSimilarPositions == winningPositions[i].length - 1) {
+                for(int position : winningPositions[i]) {
+                    if(gameState[position] == 2) {
+                        return position;
+                    }
+                }
+            }
+            if(currentSimilarPositions > maxSimilarPositions && playerSimilarPositions == 0) {
                 maxSimilarPositions = currentSimilarPositions;
                 bestPosition = i;
             }

@@ -1,0 +1,5 @@
+<mat-card fxLayout="row" fxLayoutAlign="space-between" *ngIf="card.blocked">
+    <p>Card number: {{card.cardNumber}}</p>
+    <p>Card balance: {{card.balance}}</p>
+    <button (click)="unblockCard()" mat-raised-button color="primary">unblock</button>
+</mat-card>

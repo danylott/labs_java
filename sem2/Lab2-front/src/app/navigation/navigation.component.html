@@ -1,0 +1,6 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row fxLayout="row" fxLayoutAlign="end">
+        <button (click)="toProfile()" mat-flat-button>Profile</button>
+        <button mat-flat-button *ngIf="login|async" (click)="logout()">Log out</button>
+    </mat-toolbar-row>
+</mat-toolbar>

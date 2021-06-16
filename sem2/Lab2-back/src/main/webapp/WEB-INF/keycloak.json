@@ -1,0 +1,8 @@
+{
+  "realm": "Lab-2",
+  "bearer-only": true,
+  "auth-server-url": "https://keycloak-lab2-oop3-sem2.herokuapp.com/auth/",
+  "ssl-required": "external",
+  "resource": "Lab2_backend",
+  "confidential-port": 0
+}
